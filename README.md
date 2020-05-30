@@ -1,5 +1,7 @@
 # AsylumFe
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bce1ae4d62124746a8574ba7d4442635)](https://app.codacy.com/gh/BuildForSDG/asylum-fe?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/asylum-fe&utm_campaign=Badge_Grade_Settings)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
 ## Development server
