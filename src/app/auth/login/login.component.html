@@ -1,9 +1,9 @@
 <style>
- 
+
 </style>
 <body class="text-center">
   <form class="form-signin my-auto" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" role="form">
-    <div *ngIf="error" class="alert alert-danger" role="alert">
+    <div *ngIf="authenticationError" class="alert alert-danger" role="alert">
       <strong>Failed to sign in!</strong> Please check your credentials and try again. Otherwise check your email for
       account activation link
     </div>
