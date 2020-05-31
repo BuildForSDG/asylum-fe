@@ -59,8 +59,9 @@ export class LoginComponent implements OnInit {
             });
         } */
       })
-      .catch(() => {
+      .catch((err) => {
         this.authenticationError = true;
+        console.log(err);
       });
   }
 }
