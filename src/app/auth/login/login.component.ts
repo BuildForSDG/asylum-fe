@@ -26,20 +26,21 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    if (this.loginForm.invalid) {
-      return;
-    }
     this.loginForm = this.fb.group({
       email: this.email = new FormControl('', [Validators.required, Validators.email]),
       password: this.password = new FormControl('', Validators.required)
     });
   }
-  login(formValues) {
+  login(formValues: any) {
+    if (this.loginForm.invalid) {
+      return;
+    }
     this.loginService
       .login(formValues)
       .then(() => {
         this.authenticationError = false;
-        if (
+        this.router.navigate(['/patient']);
+        /* if (
           this.router.url === '/register' ||
           /^\/activate\//.test(this.router.url) ||
           /^\/reset\//.test(this.router.url)
@@ -56,7 +57,7 @@ export class LoginComponent implements OnInit {
             this.accountService.hasAuthority('ROLE_USER').then(role => {
                 role ? this.router.navigate(['patient']) : this.router.navigate(['doctor']);
             });
-        }
+        } */
       })
       .catch(() => {
         this.authenticationError = true;

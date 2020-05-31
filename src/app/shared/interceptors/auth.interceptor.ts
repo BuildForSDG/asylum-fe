@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 import { Injectable } from '@angular/core';
-import { SERVER_API_URL } from 'src/app.constants';
+import { SERVER_API_URL } from 'src/app/app.constants';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -15,6 +15,7 @@ export class AuthInterceptor implements HttpInterceptor {
     ) {
       return next.handle(request);
     }
+    console.log('request' + request.body);
     const token =
       this.localStorage.retrieve('authenticationToken') || this.sessionStorage.retrieve('authenticationToken');
     if (!!token) {

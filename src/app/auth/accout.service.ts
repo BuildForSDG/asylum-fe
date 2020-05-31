@@ -3,7 +3,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
 import { Account } from '../shared/models/account.model';
-import { SERVER_API_URL } from '../../app.constants';
+import { SERVER_API_URL } from '../app.constants';
 
 @Injectable({ providedIn: 'root' })
 export class AccountService {
@@ -21,7 +21,7 @@ export class AccountService {
         return this.http.post(SERVER_API_URL + 'api/account', account, { observe: 'response' });
     }
 
-    authenticate(identity) {
+    authenticate(identity: any) {
         this.userIdentity = identity;
         this.authenticated = identity !== null;
         this.authenticationState.next(this.userIdentity);
@@ -32,6 +32,7 @@ export class AccountService {
             return false;
         }
 
+        // tslint:disable-next-line: prefer-for-of
         for (let i = 0; i < authorities.length; i++) {
             if (this.userIdentity.authorities.includes(authorities[i])) {
                 return true;
