@@ -13,7 +13,7 @@ export class AuthServerProvider {
     private $sessionStorage: SessionStorageService
   ) {}
   getToken() {
-    return this.$localStorage.retrieve('authenticationToken') || this.$sessionStorage.retrieve('authenticationToken');
+    return localStorage.retrieve('authenticationToken');
   }
   login(credentials: { email: any; password: any }): Observable<any> {
     const data = {
@@ -29,26 +29,19 @@ export class AuthServerProvider {
       if (bearerToken) {
         const jwt = bearerToken;
         this.storeAuthenticationToken(jwt);
-        console.log(jwt);
         return jwt;
       }
     }
   }
-  loginWithToken(jwt: string) {
-    if (jwt) {
-      this.storeAuthenticationToken(jwt);
-      return Promise.resolve(jwt);
-    } else {
-      return Promise.reject('auth-jwt-service Promise reject'); // Put appropriate error message here
-    }
-  }
-  private storeAuthenticationToken(jwt: string) {
-   /*  if (rememberMe) {
-      this.$localStorage.store('authenticationToken', jwt);
-    } else {
-      this.$sessionStorage.store('authenticationToken', jwt);
-    } */
-    // this.$localStorage.store('authenticationToken', jwt);
+  // loginWithToken(jwt: string) {
+  //   if (jwt) {
+  //     this.storeAuthenticationToken(jwt);
+  //     return Promise.resolve(jwt);
+  //   } else {
+  //     return Promise.reject('auth-jwt-service Promise reject'); // Put appropriate error message here
+  //   }
+  // }
+   storeAuthenticationToken(jwt: string) {
     localStorage.setItem('authenticationToken', jwt);
   }
   logout(): Observable<any> {

@@ -32,9 +32,9 @@ export class LoginService {
       );
     });
   }
-  loginWithToken(jwt: any) {
+  /* loginWithToken(jwt: any) {
     return this.authServerProvider.loginWithToken(jwt);
-  }
+  } */
   isLoggedIn() {
     return !!this.authServerProvider.getToken();
   }
