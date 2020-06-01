@@ -13,10 +13,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { AccountService } from './auth/accout.service';
 import { StateStorageService } from './shared/services/auth/state-storage.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, DashboardModule, AuthModule, HttpClientModule, NgxWebstorageModule.forRoot()],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, DashboardModule, AuthModule, HttpClientModule, NgxWebstorageModule.forRoot(), NgbModule],
   providers: [
     AuthService,
     AuthServerProvider,
