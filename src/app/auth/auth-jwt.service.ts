@@ -22,13 +22,14 @@ export class AuthServerProvider {
       // rememberMe: credentials.rememberMe
     };
     return this.http
-      .post('https://1829751f264a.ngrok.io/api/v1/auth/login/', data, { observe: 'response' }) // replace the endpoint
+      .post('/api/auth/login/', data, { observe: 'response' }) // replace the endpoint
       .pipe(map(authenticateSuccess.bind(this)));
     function authenticateSuccess(resp: { body: any; }) {
       const bearerToken = resp.body.key;
       if (bearerToken) {
         const jwt = bearerToken;
         this.storeAuthenticationToken(jwt);
+        console.log(jwt);
         return jwt;
       }
     }

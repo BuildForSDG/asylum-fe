@@ -15,8 +15,8 @@ export class AuthInterceptor implements HttpInterceptor {
     ) {
       return next.handle(request);
     }
-    console.log('request' + request.body);
-    const token =
+
+   /*  const token =
       this.localStorage.retrieve('authenticationToken') || this.sessionStorage.retrieve('authenticationToken');
     if (!!token) {
       request = request.clone({
@@ -24,7 +24,7 @@ export class AuthInterceptor implements HttpInterceptor {
           Authorization: 'Bearer ' + token
         }
       });
-    }
+    } */
     return next.handle(request);
   }
 }
