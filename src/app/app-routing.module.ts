@@ -7,6 +7,7 @@ import { LoginComponent } from './auth/login/login.component';
 const routes: Routes = [
   { path: 'patient', component: DashboardComponent},
   { path: 'login', component: LoginComponent },
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
 ];
 
 @NgModule({
