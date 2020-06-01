@@ -17,7 +17,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, DashboardModule, AuthModule, HttpClientModule, NgxWebstorageModule.forRoot(), NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    DashboardModule,
+    AuthModule,
+    HttpClientModule,
+    NgxWebstorageModule.forRoot(),
+    NgbModule],
   providers: [
     AuthService,
     AuthServerProvider,
