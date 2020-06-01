@@ -6,6 +6,7 @@ import { LandingPageComponent } from './landing-page.component';
   imports: [
     CommonModule
   ],
-  declarations: [LandingPageComponent]
+  declarations: [LandingPageComponent],
+  exports: [LandingPageComponent]
 })
 export class LandingPageModule { }
