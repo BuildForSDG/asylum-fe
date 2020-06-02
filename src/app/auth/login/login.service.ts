@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { AccountService } from '../accout.service';
-import { AuthServerProvider } from '../auth-jwt.service';
+import { AccountService } from '../../shared/services/auth/accout.service';
+import { AuthServerProvider } from '../../shared/services/auth/auth-jwt.service';
 import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @Injectable({ providedIn: 'root' })

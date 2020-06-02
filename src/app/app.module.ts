@@ -1,5 +1,5 @@
 import { LocalStorageService, SessionStorageService, NgxWebstorageModule } from 'ngx-webstorage';
-import { AuthServerProvider } from './auth/auth-jwt.service';
+import { AuthServerProvider } from './shared/services/auth/auth-jwt.service';
 import { AuthService } from './shared/services/auth/auth.service';
 import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
-import { AccountService } from './auth/accout.service';
+import { AccountService } from './shared/services/auth/accout.service';
 import { StateStorageService } from './shared/services/auth/state-storage.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './layout/header/header.component';
