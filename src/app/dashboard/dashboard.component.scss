@@ -46,7 +46,9 @@ i-feather {
 .sidebar .nav-link.active {
   color: #1976d2;
 }
-
+.sidebar .nav-link:hover {
+  color: #1976d2;
+}
 .sidebar .nav-link:hover .feather,
 .sidebar .nav-link.active .feather {
   color: inherit;
@@ -56,38 +58,3 @@ i-feather {
   font-size: .75rem;
   text-transform: uppercase;
 }
-/*
-   * Navbar
-   */
-.navbar {
-  background-color: #1976d2;
-}
-   .navbar-brand {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    font-size: 1rem;
-    background-color: whi;
-    box-shadow: inset -1px 0 0 #1976d2;
-  }
-
-  .navbar .navbar-toggler {
-    top: .25rem;
-    right: 1rem;
-  }
-
-  .navbar .form-control {
-    padding: .75rem 1rem;
-    border-width: 0;
-    border-radius: 0;
-  }
-
-  .form-control-dark {
-    color: darkolivegreen !important;
-    background-color: whitesmoke;
-    border-color: #1976d2;
-  }
-
-  .form-control-dark:focus {
-    border-color: transparent !important;
-    box-shadow: 0 0 0 3px #1976d2;
-  }

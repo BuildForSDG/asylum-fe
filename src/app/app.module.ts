@@ -14,9 +14,10 @@ import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { AccountService } from './auth/accout.service';
 import { StateStorageService } from './shared/services/auth/state-storage.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
