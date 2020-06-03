@@ -3,7 +3,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 import { StateStorageService } from 'src/app/shared/services/auth/state-storage.service';
-import { AccountService } from '../accout.service';
+import { AccountService } from '../../shared/services/auth/accout.service';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   email: FormControl;
   password: FormControl;
   authenticationError: boolean;
+  saving: boolean;
 
   constructor(
     private fb: FormBuilder,
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
+    this.saving = true;
     this.loginService
       .login(formValues)
       .then(() => {
@@ -59,9 +61,9 @@ export class LoginComponent implements OnInit {
             });
         } */
       })
-      .catch((err) => {
+      .catch(() => {
         this.authenticationError = true;
-        console.log(err);
+        this.saving = false;
       });
   }
 }
