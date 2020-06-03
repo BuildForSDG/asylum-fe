@@ -15,6 +15,7 @@ import { StateStorageService } from './shared/services/auth/state-storage.servic
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
@@ -23,6 +24,7 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
     AppRoutingModule,
     SharedModule,
     AuthModule,
+    DashboardModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     NgbModule],
