@@ -23,7 +23,6 @@ import { FooterComponent } from './layout/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    DashboardModule,
     AuthModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),

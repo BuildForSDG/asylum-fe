@@ -20,7 +20,8 @@
     />
     <label for="inputPassword" class="sr-only">Password</label>
     <input formControlName="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required />
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button *ngIf="!saving" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button *ngIf="saving" class="btn btn-lg btn-primary btn-block" type="submit" disabled>Signing in</button>
 
     <p class="mt-3">New to Asylum? <a [routerLink]="['/register']">Create an account</a>.</p>
     <p class=""><a [routerLink]="['/reset-password']">Forgot password?</a>.</p>
