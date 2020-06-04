@@ -14,8 +14,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
-      const login = event.url.substring(0, 10);
-      this.hideHeader = !login.toString().includes('/login');
+      const auth = event.url.substring(0, 16);
+
+      auth.toString().includes('/login') ? this.hideHeader = true :
+      (auth.toString().includes('/reset-init')) ? this.hideHeader = true : this.hideHeader = false;
       if (localStorage.getItem('authorizationToken')) {
         this.loginStatus = 'Sign out';
       } else {
