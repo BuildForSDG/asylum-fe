@@ -2,7 +2,6 @@ import { LocalStorageService, SessionStorageService, NgxWebstorageModule } from 
 import { AuthServerProvider } from './shared/services/auth/auth-jwt.service';
 import { AuthService } from './shared/services/auth/auth.service';
 import { AuthModule } from './auth/auth.module';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
