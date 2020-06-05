@@ -7,9 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ListThumbnailComponent implements OnInit {
   @Input() item: any;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
