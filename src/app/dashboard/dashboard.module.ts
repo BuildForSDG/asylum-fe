@@ -7,13 +7,15 @@ import { DashboardComponent } from './dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SpecialistsComponent } from './specialists/specialists.component';
 import { IconsModule } from '../shared/icons/icons.module';
+import { ListThumbnailComponent } from './specialists/list-thumbnail/list-thumbnail.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ProfileComponent,
-    SpecialistsComponent
+    SpecialistsComponent,
+    ListThumbnailComponent
   ],
   imports: [
     CommonModule,

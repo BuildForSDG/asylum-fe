@@ -1,0 +1,6 @@
+<div [routerLink]="['/specialists', item.pk]" class="well hoverwell thumbnail">
+  <h2>{{ item?.last_name | uppercase }}</h2>
+  <div>First name: {{ item?.first_name }}</div>
+  <div>Last name: {{ item?.last_name }}</div>
+  <div>Email: {{ item?.email }}</div>
+</div>
