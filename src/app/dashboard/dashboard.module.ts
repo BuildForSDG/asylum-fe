@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +18,9 @@ import { IconsModule } from '../shared/icons/icons.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    IconsModule
+    IconsModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DashboardModule { }

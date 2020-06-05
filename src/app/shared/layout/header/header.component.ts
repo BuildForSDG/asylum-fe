@@ -14,11 +14,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
-      const auth = event.url.substring(0, 16);
+      const auth = event.url.substring(0, 20);
 
       auth.toString().includes('/login') || auth.toString().includes('/reset-finish') ? this.hideHeader = true :
-      (auth.toString().includes('/reset-init')) ? this.hideHeader = true : this.hideHeader = false;
-      if (localStorage.getItem('authorizationToken')) {
+      (auth.toString().includes('/reset-password')) ? this.hideHeader = true : this.hideHeader = false;
+      if (localStorage.getItem('authenticationToken')) {
         this.loginStatus = 'Sign out';
       } else {
         this.loginStatus = 'Sign in';
