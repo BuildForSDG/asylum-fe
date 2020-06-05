@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
 
       auth.toString().includes('/login') || auth.toString().includes('/reset-finish') ? this.hideHeader = true :
       (auth.toString().includes('/reset-init')) ? this.hideHeader = true : this.hideHeader = false;
-      if (localStorage.getItem('authorizationToken')) {
+      if (localStorage.getItem('authenticationToken')) {
         this.loginStatus = 'Sign out';
       } else {
         this.loginStatus = 'Sign in';

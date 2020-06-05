@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       .login(formValues)
       .then(() => {
         this.authenticationError = false;
-        this.router.navigate(['/patient']);
+        this.router.navigate(['/account']);
         /* if (
           this.router.url === '/register' ||
           /^\/activate\//.test(this.router.url) ||
