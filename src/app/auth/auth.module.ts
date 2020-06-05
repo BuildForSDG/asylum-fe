@@ -1,22 +1,22 @@
 import { ResetPasswordFinishComponent } from './reset-password/finish/reset-password-finish.component';
 import { RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './register/register.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ResetPasswordInitComponent } from './reset-password/init/reset-password-init.component';
+import { AuthRoutingModule } from './auth-routing.module';
+import { AuthComponent } from './auth.component';
+import { LoginComponent } from './login/login.component';
 const components = [
   LoginComponent,
-   RegisterComponent,
-   ChangePasswordComponent,
    ResetPasswordInitComponent,
-   ResetPasswordFinishComponent
+   ResetPasswordFinishComponent,
+   AuthComponent
 ];
 @NgModule({
   imports: [
     CommonModule,
+    AuthRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule

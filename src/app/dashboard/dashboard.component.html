@@ -91,15 +91,23 @@
         </div>
       </div>
 
-      <canvas baseChart *ngIf="false"
-      [datasets]="lineChartData"
-      [labels]="lineChartLabels"
-      [options]="lineChartOptions"
-      [colors]="lineChartColors"
-      [legend]="lineChartLegend"
-      [chartType]="lineChartType"
-      [plugins]="lineChartPlugins" class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-      <!-- <h2>Overview</h2> -->
+      <!-- <canvas
+        *ngIf="false"
+        baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+        [plugins]="lineChartPlugins"
+        class="my-4 w-100"
+        id="myChart"
+        width="900"
+        height="380"
+      >
+      </canvas>
+      <h2>Overview</h2> -->
       <router-outlet></router-outlet>
     </main>
   </div>
