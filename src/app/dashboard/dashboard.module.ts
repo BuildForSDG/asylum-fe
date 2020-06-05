@@ -1,23 +1,23 @@
-import { RouterModule } from '@angular/router';
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { ChartsModule } from 'ng2-charts';
-import { IconsModule } from '../shared/icons/icons.module';
 import { ProfileComponent } from './profile/profile.component';
+import { SpecialistsComponent } from './specialists/specialists.component';
+import { IconsModule } from '../shared/icons/icons.module';
+
 
 @NgModule({
+  declarations: [
+    DashboardComponent,
+    ProfileComponent,
+    SpecialistsComponent
+  ],
   imports: [
     CommonModule,
-    ChartsModule,
-    FormsModule,
-    IconsModule,
     DashboardRoutingModule,
-    RouterModule
-  ],
-  declarations: [DashboardComponent, ProfileComponent],
-  exports: [DashboardComponent, ProfileComponent]
+    IconsModule
+  ]
 })
 export class DashboardModule { }
