@@ -1,0 +1,18 @@
+<div class="container">
+  <img [src]="item?.avatar" [alt]="item?.first_name" class="item-image">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{item?.first_name | uppercase }} {{item?.last_name | uppercase}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Gender:</strong> {{item?.gender }}</div>
+    </div>
+    <div class="col-md-6">
+      <div><strong>Email:</strong> {{item?.email }}</div>
+    </div>
+  </div>
+

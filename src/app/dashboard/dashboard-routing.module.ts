@@ -1,4 +1,4 @@
-import { ListThumbnailComponent } from './specialists/list-thumbnail/list-thumbnail.component';
+import { SpecialistsDetailsComponent } from './specialists/specialists-details/specialists-details.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -16,7 +16,7 @@ const routes: Routes = [
     children: [
       { path: 'account', component: ProfileComponent },
       { path: 'specialists', component: SpecialistsComponent },
-      {path: 'specialists/:pk', component: ListThumbnailComponent },
+      {path: 'specialists/:pk', component: SpecialistsDetailsComponent },
       { path: '', redirectTo: 'account', pathMatch: 'full' }
     ]
   }
