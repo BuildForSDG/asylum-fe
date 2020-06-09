@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { LocalStorageService, SessionStorageService, NgxWebstorageModule } from 'ngx-webstorage';
 import { AuthServerProvider } from './shared/services/auth/auth-jwt.service';
 import { AuthService } from './shared/services/auth/auth.service';
