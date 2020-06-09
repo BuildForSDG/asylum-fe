@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SpecialistsComponent } from './specialists/specialists.component';
 import { IconsModule } from '../shared/icons/icons.module';
 import { ListThumbnailComponent } from './specialists/list-thumbnail/list-thumbnail.component';
+import { SpecialistsDetailsComponent } from './specialists/specialists-details/specialists-details.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ListThumbnailComponent } from './specialists/list-thumbnail/list-thumbn
     DashboardComponent,
     ProfileComponent,
     SpecialistsComponent,
-    ListThumbnailComponent
+    ListThumbnailComponent,
+    SpecialistsDetailsComponent
   ],
   imports: [
     CommonModule,

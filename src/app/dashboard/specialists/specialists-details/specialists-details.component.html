@@ -1,0 +1,26 @@
+<a [routerLink]="['/specialists']" href="javascript: void(0)"><i-feather name="arrow-left" class="link my-3" ></i-feather></a>
+<div class="container">
+  <div class="card mt-3 float-left" style="width: 18rem;">
+    <img [src]="item?.avatar" [alt]="item?.first_name" class="item-image" />
+    <div class="card-body">
+      <h5 class="card-title">{{ item?.first_name | uppercase }} {{ item?.last_name | uppercase }}</h5>
+      <p class="card-text"><strong>Gender:</strong> {{ item?.gender }}</p>
+      <a href="mailTo: {{item.email}}" class="btn btn-primary"><strong>Email:</strong> {{ item?.email }}</a>
+    </div>
+  </div>
+  <div class="col-md-8 float-right mt-3">
+    <div class="card">
+      <div class="card-header">
+        Details
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>ID: {{ item?.pk }}</p>
+          <p>Age: {{ item?.age }}</p>
+          <footer class="blockquote-footer"><cite title="Source Title">Other details</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
