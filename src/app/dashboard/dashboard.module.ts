@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SpecialistsComponent } from './specialists/specialists.component';
 import { IconsModule } from '../shared/icons/icons.module';
 import { ListThumbnailComponent } from './specialists/list-thumbnail/list-thumbnail.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ListThumbnailComponent } from './specialists/list-thumbnail/list-thumbn
     DashboardRoutingModule,
     IconsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }
