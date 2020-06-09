@@ -1,9 +1,12 @@
-.thumbnail {
-  min-height: 225px!important;
+img {
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  margin: 5px;
+  width: 100px; /* Set a small width */
+  height: 100px;
 }
-.pad-left {
-  margin-left: 10px;
-}
-.well div {
-  color: #bbb;
+
+/* Add a hover effect (blue shadow) */
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
