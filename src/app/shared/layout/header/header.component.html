@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
-    <a class="navbar-brand" [routerLink]="['home']">
+    <a class="navbar-brand" [routerLink]="['/home']">
       <span class="th-color big">Asylum</span>
     </a>
 
@@ -13,13 +13,13 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['home']" routerLinkActive="active">Home</a>
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['dashboard']" routerLinkActive="active">Dashboard</a>
+          <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['auth/login']" routerLinkActive="active">Sign In</a>
+          <a class="nav-link" [routerLink]="['/auth/login']" routerLinkActive="active">Sign In</a>
         </li>
       </ul>
     </div>
