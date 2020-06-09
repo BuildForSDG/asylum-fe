@@ -5,7 +5,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ item?.first_name | uppercase }} {{ item?.last_name | uppercase }}</h5>
       <p class="card-text"><strong>Gender:</strong> {{ item?.gender }}</p>
-      <a href="#" class="btn btn-primary"><strong>Email:</strong> {{ item?.email }}</a>
+      <a href="mailTo: {{item.email}}" class="btn btn-primary"><strong>Email:</strong> {{ item?.email }}</a>
     </div>
   </div>
   <div class="col-md-8 float-right mt-3">
