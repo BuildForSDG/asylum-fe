@@ -9,6 +9,7 @@ import { SpecialistsComponent } from './specialists/specialists.component';
 import { IconsModule } from '../shared/icons/icons.module';
 import { ListThumbnailComponent } from './specialists/list-thumbnail/list-thumbnail.component';
 import { SpecialistsDetailsComponent } from './specialists/specialists-details/specialists-details.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SpecialistsDetailsComponent } from './specialists/specialists-details/s
     DashboardRoutingModule,
     IconsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }

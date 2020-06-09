@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { DisordersComponent } from './disorders/disorders.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { DoctorListComponent } from './doctor-list/doctor-list.component';
     CommonModule,
     HomeRoutingModule,
     RouterModule,
+    SharedModule
   ]
 })
 export class HomeModule { }
