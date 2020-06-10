@@ -1,1 +1,41 @@
-<p>disorders works!</p>
+<div class="container center">
+  <div class="row  pt-3">
+    <div class="col-xs-12 col-sm-8">
+
+      <div class="accordion" id="accordionExample">
+        <div class="card" *ngFor="let disorder of (disorderList$ | async)">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                {{ disorder.title}}
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              {{ disorder.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">
+            <span>Actions</span>
+          </h5>
+        </div>
+
+        <div class="card-body">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
